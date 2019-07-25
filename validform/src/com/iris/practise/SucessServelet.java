@@ -28,7 +28,7 @@ public class SucessServelet extends HttpServlet {
 		PrintWriter out=response.getWriter();
 		
 		String str=(String)request.getAttribute("username");
-		out.println("<h1>welcome </h1>"+str);
+		out.println("<h1>WELCOME </h1>"+str);
 		out.println("<form  action='profile' method='post'><input type='submit' value='view profile'><br></form>");
 		out.println("<a href='changepassword.html'>change password</a>");
 		
