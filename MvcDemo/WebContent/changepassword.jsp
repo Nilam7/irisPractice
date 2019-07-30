@@ -5,19 +5,16 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Register</title>
-
+<title>update password</title>
 </head>
 <body>
-<form action="register" method="post">
-<label>FirstName</label><br>
-<input type="text" name="fname"><br>
-<label>LastName</label><br>
-<input type="text" name="lname"><br>
-<label>Gender</label><br>
-<input type="text" name="gender"><br>
-<label>Qualification</label><br>
-<input type="text" name="q"><br>
+<form action="changepassword" method="post">
+<label>Enter employee id</label><br>
+<input type="text" name="id"><br>
+<label>Current password</label><br>
+<input type="text" name="pass"><br>
+<label>new password</label><br>
+<input type="text" name="pass1"><br>
 <input type="submit" value="submit">
 
 </form>

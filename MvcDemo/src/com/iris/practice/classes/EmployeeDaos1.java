@@ -3,6 +3,7 @@ package com.iris.practice.classes;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -96,9 +97,50 @@ public class EmployeeDaos1 implements Employeedaos {
 
 	@Override
 	public List<Employee> getAllEmployee() {
-		// TODO Auto-generated method stub
-		return null;
+List<Employee> eList=new ArrayList<>();
+		
+		try (Connection conn=ConnectionProvider.getDbConnection();){
+			PreparedStatement ps=conn.prepareStatement("select Employeeid,Password,First_Name,Last_Name,Gender,Qualification,Role from Employee");
+			ResultSet rs=ps.executeQuery();
+			while(rs.next()){
+				
+				//if user is valid
+				String id=rs.getString(1);
+				String pass=rs.getString(2);
+				String fname=rs.getString(3);
+				String lname=rs.getString(4);
+				
+				String gender=rs.getString(5);
+				String q=rs.getString(6);
+				String role=rs.getString(7);
+				
+				Employee obj=new Employee();
+				obj.setEmployeeid(id);
+				obj.setPassword(pass);
+				obj.setFirst_name(fname);
+				obj.setLast_name(lname);
+				obj.setGender(gender);
+				obj.setQulalification(q);
+				obj.setRole(role);
+				
+				eList.add(obj);
+				
+				
+				
+			}
+				
+			}
+			catch(Exception e){
+				e.printStackTrace();
+			}
+			return eList;
+
 	}
-	}
+
+
+
+
+
+}
 
 

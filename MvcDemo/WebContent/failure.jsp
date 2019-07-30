@@ -9,6 +9,6 @@
 <body>
 <jsp:include page="header.jsp"></jsp:include>
 <h3>Access Denied</h3>
-<a href="Welcome.jsp">Click here to lOGIN AGAIN</a>
+<a href="Login.jsp">Click here to LOGIN AGAIN</a>
 </body>
 </html>

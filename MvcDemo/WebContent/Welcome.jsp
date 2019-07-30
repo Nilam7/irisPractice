@@ -7,7 +7,7 @@
 <title>Welcome to Iris</title>
 </head>
 <body bgcolor="lightgrey">\
-<hr></hr>
+
 <div style="height:200px;width:100%;text-align:center">
 <h1 text-color="blue">IRIS Software</h1>
 <a href="Login.jsp" font-color="red">Click here to LOGIN</a>

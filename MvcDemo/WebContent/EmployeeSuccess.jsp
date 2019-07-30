@@ -9,7 +9,7 @@
 </head>
 <body>
 <h3>Welcome</h3><br>
-<a href="viewprofile.jsp">1.View Profile</a><br>
+<a href="viewprofile">1.View Profile</a><br>
 <a href="changepassword.jsp">2.Change Password</a><br>
 
 

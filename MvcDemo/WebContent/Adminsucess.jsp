@@ -8,10 +8,11 @@
 </head>
 <body>
 <jsp:include page="header.jsp"></jsp:include>
-<h3>WELCOME <%=session.getAttribute("userName") %></h3><br>
+<h3>WELCOME <%=session.getAttribute("r.getEmployeename()") %></h3><br>
 <a href="register.jsp">Register a new Candidate</a><br>
 <a href="view.jsp">View a Candidate</a><br>
 <a href="Delete.jsp">Delete a  Candidate from database</a><br>
 <a href="update.jsp">Update a candidate info</a><br>
+<a href="viewall">view all employees</a>
 </body>
 </html>
