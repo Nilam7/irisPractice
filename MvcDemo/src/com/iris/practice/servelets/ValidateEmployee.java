@@ -29,12 +29,16 @@ public class ValidateEmployee extends HttpServlet {
 		
 		EmployeeDaos1 dobj1=new EmployeeDaos1();
 		Employee r=dobj1.Validate(empid,pass);
+		
+		System.out.println(r);
+		
 		if(r!=null)
 		{
 			HttpSession session=request.getSession();
 			session.setAttribute("userObj",r);
 			
 			if(r.getRole().equals("Admin")){
+				//session.setAttribute("userObj",r.getFirst_name());
 				RequestDispatcher rd=request.getRequestDispatcher("Adminsucess.jsp");
 				rd.forward(request, response);
 			}

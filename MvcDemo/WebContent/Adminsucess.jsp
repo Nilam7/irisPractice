@@ -6,13 +6,18 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>
-<body>
+<body bgcolor="lightgrey">
 <jsp:include page="header.jsp"></jsp:include>
-<h3>WELCOME <%=session.getAttribute("r.getEmployeename()") %></h3><br>
-<a href="register.jsp">Register a new Candidate</a><br>
-<a href="view.jsp">View a Candidate</a><br>
-<a href="Delete.jsp">Delete a  Candidate from database</a><br>
-<a href="update.jsp">Update a candidate info</a><br>
-<a href="viewall">view all employees</a>
+<feildset align=center>
+<legend border=2px>ADMIN</legend>
+<h3> WELCOME ${userObj.first_name}</h3><br>
+<div align=center>
+<a href="register.jsp">1.Register a new Candidate</a><br>
+<a href="view.jsp">2.View a Candidate</a><br>
+<a href="Delete.jsp">3.Delete a  Candidate from database</a><br>
+<a href="update.jsp">4.Update a candidate info</a><br>
+<a href="viewall">5.view all employees in database</a>
+</div>
+</feildset>
 </body>
 </html>

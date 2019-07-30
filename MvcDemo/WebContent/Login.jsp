@@ -6,9 +6,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>
-<body>
+<body bgcolor="lightgrey">
 <jsp:include page="header.jsp"></jsp:include>
-
+<fieldset align="center">
+<legend>Login page</legend>
 <table>
 <form action="Validate" method="post" text-align=center>
 <tr>
@@ -27,6 +28,7 @@
 </tr>
 </form>
 </table>
+<fieldset>
 
 </body>
 </html>

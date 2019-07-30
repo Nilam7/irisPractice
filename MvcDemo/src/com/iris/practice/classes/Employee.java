@@ -1,13 +1,25 @@
 package com.iris.practice.classes;
 
 public class Employee {
-	private String Employeeid;
-	private String Password;
+	private String employeeId;
+	private String password;
 	private String first_name;
 	private String last_name;
 	private String gender;
 	private String qulalification;
 	private String role;
+	public String getEmployeeId() {
+		return employeeId;
+	}
+	public void setEmployeeId(String employeeId) {
+		this.employeeId = employeeId;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
 	public String getFirst_name() {
 		return first_name;
 	}
@@ -38,21 +50,11 @@ public class Employee {
 	public void setRole(String role) {
 		this.role = role;
 	}
-	public String getEmployeeid() {
-		return Employeeid;
-	}
-	public void setEmployeeid(String employeeid) {
-		Employeeid = employeeid;
-	}
-	public String getPassword() {
-		return Password;
-	}
-	public void setPassword(String password) {
-		Password = password;
+	@Override
+	public String toString() {
+		return "Employee [employeeId=" + employeeId + ", password=" + password + ", first_name=" + first_name
+				+ ", last_name=" + last_name + ", gender=" + gender + ", qulalification=" + qulalification + ", role="
+				+ role + "]";
 	}
 	
-	
-
-	
-
 }

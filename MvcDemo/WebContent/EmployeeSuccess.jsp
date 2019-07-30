@@ -7,12 +7,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>
-<body>
-<h3>Welcome</h3><br>
+<body bgcolor="grey">
+<feildset align=center>
+<legend>Employee</legend>
+<h3>Welcome ${userObj.first_name}</h3><br>
+<div align=center>
 <a href="viewprofile">1.View Profile</a><br>
 <a href="changepassword.jsp">2.Change Password</a><br>
+</div>
 
 
-
+</feildset>
 </body>
 </html>

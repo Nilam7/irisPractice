@@ -31,8 +31,8 @@ public class EmployeeDaos1 implements Employeedaos {
 				
 				//
 				Employee obj=new Employee();
-				obj.setEmployeeid(Employeeid);
-				 obj.setEmployeeid(fname);
+				obj.setEmployeeId(Employeeid);
+				 obj.setFirst_name(fname);
 				obj.setGender(gender);
 				
 				obj.setQulalification(q);
@@ -100,7 +100,7 @@ public class EmployeeDaos1 implements Employeedaos {
 List<Employee> eList=new ArrayList<>();
 		
 		try (Connection conn=ConnectionProvider.getDbConnection();){
-			PreparedStatement ps=conn.prepareStatement("select Employeeid,Password,First_Name,Last_Name,Gender,Qualification,Role from Employee");
+			PreparedStatement ps=conn.prepareStatement("select * from Employee");
 			ResultSet rs=ps.executeQuery();
 			while(rs.next()){
 				
@@ -115,7 +115,7 @@ List<Employee> eList=new ArrayList<>();
 				String role=rs.getString(7);
 				
 				Employee obj=new Employee();
-				obj.setEmployeeid(id);
+				obj.setEmployeeId(id);
 				obj.setPassword(pass);
 				obj.setFirst_name(fname);
 				obj.setLast_name(lname);

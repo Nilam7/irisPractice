@@ -6,26 +6,25 @@
 	
 	<table>
 		<tr>
-			<th>Emp Id</th>
-			<th>Emp pass</th>
+			<th>EmpId</th>
+			<th>Emppass</th>
 			
-			<th>Emp fName</th>
-			<th>Emp lname</th>
+			<th>EmpfName</th>
+			<th>Emplname</th>
 			<th>Gender</th>
-			
 			<th>Qualification</th>
 			<th>Role</th>
 		</tr>
 		<c:forEach items="${eList}" var="e">
 			<tr>
-				<td>${e.id}</td>
-				<td>${e.pass}</td>
+				<td>${e.employeeId}</td>
+				<td>${e.password}</td>
 				
-				<td>${e.fname}</td>
-					<td>${e.lname}</td>
+				<td>${e.first_name}</td>
+					<td>${e.last_name}</td>
 				<td>${e.gender}</td>
 				
-				<td>${e.q}</td>
+				<td>${e.qulalification}</td>
 					<td>${e.role}</td>
 			</tr>
 		</c:forEach>

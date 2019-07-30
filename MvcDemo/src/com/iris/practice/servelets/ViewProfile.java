@@ -46,10 +46,10 @@ public class ViewProfile extends HttpServlet {
 				String gender=rs.getString(5);
 				String q=rs.getString(6);
 				String role=rs.getString(7);
-				out.print(fname);
-				out.print(gender);
-				out.print(q);
-				out.print(role);
+				out.print("<h1>Name</h1><br>"+fname);
+				out.print("<h1>Gender</h1><br>"+gender);
+				out.print("<h1>Qualification</h1><br>"+q);
+				out.print("<h1>Role</h1><br>"+role);
 				
 			}
 				

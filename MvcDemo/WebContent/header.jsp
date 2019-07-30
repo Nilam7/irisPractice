@@ -8,7 +8,7 @@
 </head>
 <body background-color="grey">
 <div style="height:200px;width:100%;text-align:center">
-<h1 color="blue">IRIS Software</h1>
+<h1 ><font color="yellow">IRIS Software</font></h1>
 </div>
 </body>
 </html>
