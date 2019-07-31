@@ -4,11 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Welcome to Iris</title>
+<title>Insert Page</title>
 </head>
-<body background-color="grey">
-<div style="height:200px;width:100%;text-align:center">
-<h1 ><font color="yellow"><ul>IRIS Software</ul></font></h1>
-</div>
+<body>
+<jsp:forward page="serv"/>
+
 </body>
 </html>

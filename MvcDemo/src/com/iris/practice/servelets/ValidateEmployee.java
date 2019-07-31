@@ -30,7 +30,7 @@ public class ValidateEmployee extends HttpServlet {
 		EmployeeDaos1 dobj1=new EmployeeDaos1();
 		Employee r=dobj1.Validate(empid,pass);
 		
-		System.out.println(r);
+		
 		
 		if(r!=null)
 		{

@@ -3,8 +3,8 @@
 
 <jsp:include page="header.jsp"/>
 
-	
-	<table>
+	<body bgcolor="cyan">
+	<table align="center">
 		<tr>
 			<th>EmpId</th>
 			<th>Emppass</th>
