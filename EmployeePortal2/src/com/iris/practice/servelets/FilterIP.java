@@ -39,7 +39,7 @@ public class FilterIP implements Filter {
 		PrintWriter out=res.getWriter();
 		LocalDateTime ldt=LocalDateTime.now();
 		String hr=ldt.getHour()+":"+ldt.getMinute()+":"+ldt.getSecond();
-		String s=request.getRemoteAddr();
+		String s=request.getRemoteAddr(); 
 		
 		/*String s1=request.getParameter("s");
 		int s2=Integer.parseInt(request.getParameter("hr"));*/
