@@ -27,14 +27,13 @@ public class ChangePassword extends HttpServlet {
 		response.setContentType("text/html");
 		PrintWriter out=response.getWriter();
 		
-		String s1=request.getParameter("id");
+
 		String s2=request.getParameter("pass");
 		String s3=request.getParameter("pass1");
 		try(Connection conn= ConnectionProvider.getDbConnection() )
 		{
-			PreparedStatement ps=conn.prepareStatement("Update Employee set password=? where employeeid=? and password=? ");
+			PreparedStatement ps=conn.prepareStatement("Update Employee set password=? where  password=? ");
 			ps.setString(1,s3);
-			ps.setString(2,s1);
 			ps.setString(3,s2);
 			
 			

@@ -1,6 +1,9 @@
 package com.iris.practice.classes;
 
-public class Employee {
+import javax.servlet.http.HttpSessionBindingEvent;
+import javax.servlet.http.HttpSessionBindingListener;
+
+public class Employee implements HttpSessionBindingListener {
 	private String employeeId;
 	private String password;
 	private String first_name;
@@ -56,5 +59,36 @@ public class Employee {
 				+ ", last_name=" + last_name + ", gender=" + gender + ", qulalification=" + qulalification + ", role="
 				+ role + "]";
 	}
+	
+	public void valueBound(HttpSessionBindingEvent event)
+	{
+		Employee obj=(Employee)event.getValue();
+		String s=obj.getGender();
+		if(s.equals('M'))
+		{
+			obj.setGender(s.concat("ale"));
+		}
+		
+		
+	
+		
+	}
+	@Override
+	public void valueUnbound(HttpSessionBindingEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 }

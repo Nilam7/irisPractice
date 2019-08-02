@@ -11,7 +11,7 @@
 <body>
 	Name: <c:out value="${sessionScope.name }"/><br>
 
-	Designation: <c:out value="${sessionScope.designation }" /><br>
+	Designation: <c:out value="${sessionScope.designation }"/><br>
 
 		EmployeerName: <c:out value="${applicationScope.employeername }"/><br>
 
@@ -22,6 +22,7 @@
 	 					</c:forTokens>
 	 
 				 <br/>
+				 				
 	 
 </body>
 </html>
