@@ -5,6 +5,7 @@ import java.util.List;
 import org.hibernate.Transaction;
 
 import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 
 import com.iris.models.Person;
 import com.iris.providers.SessionFactoryProvider;
@@ -23,7 +24,9 @@ public class PersonDaoImpl implements PersonDao {
 	}
 
 	public boolean deletePerson(int personId) {
-		Session session=SessionFactoryProvider.getSF().openSession();
+		SessionFactory sf=SessionFactoryProvider.getSF();
+		Session session=sf.openSession();
+		//Session session=SessionFactoryProvider.getSF().openSession();
 		Transaction tx=session.beginTransaction();
 		
 		Person p=session.get(Person.class, personId);
