@@ -68,10 +68,13 @@ public class ProductDaoImpl implements ProductDao{
 	}
 
 	public Product getProductById(int pid) {
-		// TODO Auto-generated method stub
-		return null;
+		
+			Session session=SessionFactoryProvider.getSf().openSession();
+			Product p=session.get(Product.class,pid);
+			session.close();
+			
+			return p;
+		}
 	}
 
 	
-	
-}
