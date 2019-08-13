@@ -46,5 +46,48 @@ public class CategoryDaoImpl implements CategoryDao{
 		}
 		return null;
 	}
+	public boolean deleteCategory(String categoryId) {
+		try
+		{
+			Session session=sessionFactory.getCurrentSession();
+			Category c=new Category();
+			c.setCategoryId(categoryId);
+			session.delete(c);
+			return true;
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		return false;
+	}
+	@Override
+	public boolean updateCategory(Category obj) {
+		try
+		{
+			Session session=sessionFactory.getCurrentSession(); //hibernate
+			session.update(obj);
+			return true;
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		return false;
+	}
+	public Category getCategory(String categoryId) {
+		try
+		{
+			Session session=sessionFactory.getCurrentSession();
+			Category c=session.get(Category.class, categoryId);
+			return c;
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
 
 }

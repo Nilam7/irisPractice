@@ -3,6 +3,7 @@ package com.vinayak.model;
 import java.util.List;
 import java.util.Set;
 
+import javax.annotation.Generated;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
