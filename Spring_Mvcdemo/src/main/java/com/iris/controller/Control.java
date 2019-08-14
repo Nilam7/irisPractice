@@ -89,4 +89,12 @@ public class Control {
 		return "AddCategory";
 	
 	}
+	@RequestMapping(value="/deleteUpdate/{catId}",method=RequestMethod.GET)
+	public String updateDeleteCategory(@PathVariable String catId,ModelMap map)
+	{
+		categorydao.deleteCategory(catId);
+		List<Category> categoryList=categorydao.getAllCategories();
+		map.addAttribute("lists",categoryList);
+		return "view";
+	}
 }
