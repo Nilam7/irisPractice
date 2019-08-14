@@ -6,12 +6,13 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.vinayak.model.Category;
 
-
+@Component
 @Repository(value="categoryDao")
 @Transactional
 public class CategoryDaoImpl implements CategoryDao{
@@ -23,7 +24,7 @@ public class CategoryDaoImpl implements CategoryDao{
 		try
 		{
 			Session session=sessionFactory.getCurrentSession(); //hibernate
-			session.save(obj);
+			session.saveOrUpdate(obj);
 			return true;
 		}
 		catch(Exception e)

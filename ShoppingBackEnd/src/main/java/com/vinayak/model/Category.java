@@ -4,14 +4,18 @@ import java.util.List;
 import java.util.Set;
 
 import javax.annotation.Generated;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Component;
 
 @Entity
+@Table
 public class Category {
 	
 	@Id
@@ -19,7 +23,7 @@ public class Category {
 	private String categoryName;
 	private String description;
 	
-	@OneToMany(mappedBy="cat")
+	@OneToMany(cascade=CascadeType.ALL,mappedBy="cat",fetch=FetchType.EAGER)
 	private List<Product> prod;
 	
 	public String getCategoryId() {

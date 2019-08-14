@@ -1,20 +1,25 @@
 package com.vinayak.model;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 @Entity
+@Table
 public class Product {
 	@Id
 	private String productId;
 	private String productName;
 	private String prodesc;
 	
-	@ManyToOne
-	@JoinColumn(name="Cat_Id")
+	@ManyToOne(cascade=CascadeType.PERSIST,fetch=FetchType.EAGER)
+	@JoinColumn(name="Cat_Id",insertable=false,updatable=false)
 	private Category cat;
-	
+	private String  Cat_Id;
 	
 	public String getProductId() {
 		return productId;
@@ -40,5 +45,12 @@ public class Product {
 	public void setCat(Category cat) {
 		this.cat = cat;
 	}
+	public String getCat_Id() {
+		return Cat_Id;
+	}
+	public void setCat_Id(String cat_Id) {
+		Cat_Id = cat_Id;
+	}
+	
 	
 }
