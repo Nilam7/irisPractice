@@ -89,6 +89,27 @@ public class CategoryDaoImpl implements CategoryDao{
 		}
 		return null;
 	}
+	@Override
+	public boolean updateDelete(String categoryId) {
+		try
+		{
+			Session session=sessionFactory.getCurrentSession();
+			Query query=session.createQuery("delete from Product where cat.categoryId=:cId");
+			query.setParameter("cId", categoryId);
+			int i=query.executeUpdate();
+			if(i!=0)
+			{
+				Category c=session.get(Category.class, categoryId);
+				session.delete(c);
+			}
+			return true;
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		return false;
+	}
 	
 
 }
