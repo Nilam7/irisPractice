@@ -94,7 +94,7 @@ public class Control {
 	{
 		categorydao.deleteCategory(catId);
 		List<Category> categoryList=categorydao.getAllCategories();
-		map.addAttribute("lists",categoryList);
+		map.addAttribute("category",categoryList);
 		return "view";
 	}
 }
